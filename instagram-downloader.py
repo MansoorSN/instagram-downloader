@@ -5,13 +5,14 @@ import requests
 
 st.set_page_config(page_title="Instagram Downloader", layout="wide")
 
-@st.cache_resource
+'''@st.cache_resource
 def init_instaloader():
-    return instaloader.Instaloader()
+    return instaloader.Instaloader()'''
 
-L = init_instaloader()
-L.login(st.secrets.USERNAME, st.secrets.PASSWORD)
-L.load_session_from_file(st.secrets.USERNAME) 
+L = instaloader.Instaloader()
+#L = init_instaloader()
+#L.login(st.secrets.USERNAME, st.secrets.PASSWORD)
+#L.load_session_from_file(st.secrets.USERNAME) 
 
 
 st.title("Instagram Downloader")
