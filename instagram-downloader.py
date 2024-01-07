@@ -10,6 +10,8 @@ def init_instaloader():
     return instaloader.Instaloader()
 
 L = init_instaloader()
+L.login(st.secrets.USERNAME, st.secrets.PASSWORD)
+L.load_session_from_file(st.secrets.USERNAME) 
 
 
 st.title("Instagram Downloader")
