@@ -9,6 +9,8 @@ st.set_page_config(page_title="Instagram Downloader", layout="wide")
 def init_instaloader():
     return instaloader.Instaloader()'''
 
+
+
 L = instaloader.Instaloader()
 #L = init_instaloader()
 #L.login(st.secrets.USERNAME, st.secrets.PASSWORD)
