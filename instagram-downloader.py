@@ -10,13 +10,7 @@ def init_instaloader():
     return instaloader.Instaloader()
 
 L = init_instaloader()
-#L.login(st.secrets["USERNAME"], st.secrets["PASSWORD"])
 
-try:
-    L.load_session_from_file(st.secrets["USERNAME"], st.secrets["USERNAME"] + st.secrets["PASSWORD"])
-except:
-    L.login(st.secrets["USERNAME"], st.secrets["PASSWORD"])
-    L.save_session_to_file(st.secrets["USERNAME"] + st.secrets["PASSWORD"])
 
 st.title("Instagram Downloader")
 st.markdown('''
